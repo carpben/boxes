@@ -7,10 +7,12 @@ function Box() {
    return (
       <div
          className={`box ${lightened ? "light" : ""}`}
-         onClick={setInterval(() => {
-            console.log("running");
-            setLightened((currentLight) => !currentLight);
-         }, 2000)}
+         onClick={() =>
+            setInterval(() => {
+               console.log("running");
+               setLightened((currentLight) => !currentLight);
+            }, 2000)
+         }
       />
    );
 }
